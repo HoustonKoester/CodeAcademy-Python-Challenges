@@ -1,0 +1,39 @@
+weight = 8.4
+cost = 1
+cost2 = 125
+cost3 = 1
+#shipping calc
+if weight <= 2:
+  cost = 1.5*weight + 20
+  print("The cost of this shipment using ground shipping", cost)
+elif weight > 2 and weight <= 6:
+  cost = 3*weight + 20
+  print("The cost of this shipment using ground shipping", cost)
+elif weight > 6 and weight <= 10:
+  cost = 4*weight + 20
+  print("The cost of this shipment using ground shipping", cost)
+elif weight > 10:
+  cost = 4.75*weight + 20
+  print("The cost of this shipment using ground shipping", cost)
+
+print("The cost of shipping via ground shipping premium is", cost2)
+
+if weight <= 2:
+  cost3 = 4.5*weight 
+  print("The cost of this shipment using drone shipping", cost3)
+elif weight > 2 and weight <= 6:
+  cost3 = 9*weight
+  print("The cost of this shipment using drone shipping", cost3)
+elif weight > 6 and weight <= 10:
+  cost3 = 12*weight
+  print("The cost of this shipment using drone shipping", cost3)
+elif weight > 10:
+  cost3 = 14.25*weight
+  print("The cost of this shipment using drone shipping", cost3)
+
+if cost < cost2 and cost < cost3:
+  print("Ground shipping will be your best option")
+elif cost2 < cost and cost2 < cost3:
+  print("Ground shipping premium will be your best option")
+elif cost3 < cost2 and cost3 < cost:
+  print("Drone shipping will be your best option")
